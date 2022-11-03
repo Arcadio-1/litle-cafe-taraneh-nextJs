@@ -1,0 +1,38 @@
+.hero {
+  @include dflex;
+  &-data {
+    width: 40%;
+  }
+  &-title {
+    text-transform: capitalize;
+    margin-bottom: 3rem;
+  }
+  &-text {
+    font-size: 1.2rem;
+  }
+  &-seeMoreBtn {
+    background-color: color(g1-2);
+    margin: 2rem;
+    font-size: 2rem;
+    padding: 0.3rem 2rem;
+    border-radius: 5px;
+    display: inline-flex;
+    &:hover {
+      transform: scale(1.01);
+    }
+  }
+  &-compony {
+    &-list {
+      gap: 1rem;
+      @include dflex;
+      list-style: none;
+    }
+    &-item {
+      width: 8rem;
+    }
+  }
+  &-image {
+    max-width: 400px;
+    width: 50%;
+  }
+}

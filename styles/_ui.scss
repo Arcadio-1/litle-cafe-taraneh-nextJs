@@ -1,0 +1,110 @@
+.card {
+  padding: 1rem;
+  margin: auto;
+  border: 2px solid snow;
+  background-color: rgba(5, 65, 133, 0.562);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  max-width: 600px;
+  border-radius: 10px;
+  margin-top: 3rem;
+}
+.form {
+  // background-color: #fff;
+  margin-top: 1rem;
+  &-line {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    label {
+      margin-bottom: 0.3rem;
+      font-size: 1.4rem;
+    }
+    input {
+      border: transparent;
+      border-radius: 5px;
+      line-height: 2rem;
+    }
+    textarea {
+      border: transparent;
+      border-radius: 5px;
+      height: 10rem;
+    }
+  }
+  &-checkBox {
+    margin-top: 0.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    label {
+      font-size: 1.1rem;
+      display: flex;
+    }
+    input {
+      outline: transparent;
+      font-size: 2rem;
+      width: 1.3rem;
+      height: 1.3rem;
+      margin-bottom: 7px;
+    }
+  }
+  &-action {
+    display: flex;
+    gap: 1rem;
+    button {
+      border: transparent;
+      padding: 0.4rem 3rem;
+      border-radius: 5px;
+      font-size: 1.3rem;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.01);
+      }
+      &:first-child {
+        background-color: green;
+        color: snow;
+      }
+      &:last-child {
+        color: snow;
+        background-color: rgba(37, 82, 95, 0.617);
+      }
+    }
+  }
+  &-link {
+    padding: 0.2rem;
+    margin-top: 1rem;
+    background-color: rgb(251, 186, 238);
+    cursor: pointer;
+    border-radius: 5px;
+    &:hover {
+      transform: scale(1.01);
+    }
+    a {
+      width: 100%;
+      display: block;
+      text-decoration: none;
+      font-size: 1.3rem;
+      color: rgb(16, 141, 218);
+    }
+  }
+}
+.notif {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+  &-container {
+    padding: 1rem;
+  }
+  .success {
+    background-color: #008000be;
+  }
+  .pendding {
+    background-color: #1db8cdbe;
+  }
+  .error {
+    background-color: #e93c3cbe;
+  }
+}

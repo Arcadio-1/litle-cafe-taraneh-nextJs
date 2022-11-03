@@ -1,0 +1,13 @@
+@import "./mixinAndVariabels";
+@import "./base";
+@import "./ui";
+
+/////////// COMPONENTS
+//layouts
+@import "./Components/Layout/header";
+@import "./Components/Layout/footer";
+//
+@import "./Components/hero.scss";
+@import "./Components/bestOfer.scss";
+@import "./Components/Shop.scss";
+@import "./Components/Blog.scss";

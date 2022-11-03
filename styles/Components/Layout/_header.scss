@@ -1,0 +1,133 @@
+.header {
+  display: grid;
+  align-items: center;
+  grid-template-areas: "logo basket navs navs navs search search log";
+  background-color: color(g1-2);
+  &-logo {
+    grid-area: logo;
+    &-text {
+      font: 1.2rem;
+      font-family: "Times New Roman", Times, serif;
+      color: color(light);
+    }
+  }
+  &-basket {
+    position: relative;
+    grid-area: basket;
+    width: 3rem;
+    height: 3rem;
+    svg {
+      path {
+        fill: color(light);
+      }
+    }
+    &-container {
+      z-index: 10;
+      padding: 1.5rem;
+      position: absolute;
+      background-color: rgba(color(dark), 0.9);
+    }
+    &-listHeader {
+      padding: 0.5rem 1.5rem;
+      padding-right: 10rem;
+      @include dflex(space-between);
+      p {
+        font-size: 1.5rem;
+      }
+      P:first-child {
+        // margin-right: rem;
+      }
+    }
+    &-list {
+      border: 2px solid rgba(color(light), 0.6);
+      border-radius: 5px;
+    }
+    &-item {
+      @include dflex(space-between);
+      gap: 1.5rem;
+      border-bottom: 2px solid rgba(color(light), 0.6);
+      padding: 0.5rem 1rem;
+      margin-bottom: 1.5rem;
+      &-image {
+        width: 6rem;
+      }
+      &-title {
+        text-transform: capitalize;
+        font-size: 1.5rem;
+      }
+      &-amount {
+        text-align: center;
+        width: 4rem;
+        font-size: 1.5rem;
+      }
+      &-removeBtn {
+        border: transparent;
+        padding: 0.3rem 2rem;
+        background-color: color(g1-2);
+        color: color(light);
+      }
+      &:last-child {
+        padding-bottom: 0px;
+        border: transparent;
+      }
+    }
+    &-confirmBtn {
+      margin: 1rem;
+      background-color: #1e9b0e;
+      color: color(light);
+    }
+    &-clearBtn {
+      background-color: #cc3232;
+      color: color(light);
+    }
+  }
+  &-navLinks {
+    grid-area: navs;
+    @include dflex;
+    gap: 1rem;
+    margin-right: auto;
+    list-style: none;
+    &-item {
+      a {
+        font-weight: 600;
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: color(light);
+      }
+    }
+  }
+  &-searchBox {
+    background-color: rgba(color(light), 0.6);
+    grid-area: search;
+    position: relative;
+    border-radius: 5px;
+    // border: 2px solid red;
+    overflow: hidden;
+    &-label {
+      left: 2px;
+      position: absolute;
+    }
+    &-input {
+      width: 100%;
+      border: transparent;
+      background-color: transparent;
+      padding-left: 12px;
+    }
+  }
+  &-log {
+    @include dflex;
+    gap: 0.2rem;
+    grid-area: log;
+    a {
+      text-decoration: none;
+      color: color(light);
+    }
+    span {
+      color: color(light);
+    }
+    &-login {
+    }
+    &-signup {
+    }
+  }
+}

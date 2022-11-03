@@ -1,0 +1,40 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: 0;
+}
+html {
+  font-size: 62.5%;
+  @include responsive(lg) {
+    font-size: 58%;
+  }
+  @include responsive(md) {
+    font-size: 55%;
+  }
+  @include responsive(sm) {
+    font-size: 50%;
+  }
+  @include responsive(xs) {
+    font-size: 48%;
+  }
+}
+body {
+  background-color: color(g1-1);
+  color: color(light);
+}
+a {
+  text-decoration: none;
+  color: color(light);
+}
+button {
+  cursor: pointer;
+  border: transparent;
+  padding: 0.3rem 2rem;
+  border-radius: 2px;
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  color: color(light);
+  &:hover {
+    transform: scale(1.01);
+  }
+}

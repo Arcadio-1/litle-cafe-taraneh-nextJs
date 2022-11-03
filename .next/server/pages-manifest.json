@@ -1,0 +1,15 @@
+{
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/api/buying": "pages/api/buying.js",
+  "/cart": "pages/cart.html",
+  "/": "pages/index.html",
+  "/Blog": "pages/Blog.js",
+  "/Shop/[id]": "pages/Shop/[id].js",
+  "/Shop": "pages/Shop.js",
+  "/manager": "pages/manager.js",
+  "/Blog/[slug]": "pages/Blog/[slug].js",
+  "/Blog/list": "pages/Blog/list.js",
+  "/404": "pages/404.html"
+}

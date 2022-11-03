@@ -1,0 +1,47 @@
+.footer {
+  margin-top: 5rem;
+  background-color: color(g1-2);
+  @include dflex(space-between);
+  padding: 1rem;
+  &-nav {
+    &-title {
+      font-size: 1.5rem;
+    }
+    &-list {
+      margin-top: 1rem;
+      list-style: none;
+    }
+    &-item {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+  &-contact {
+    &-title {
+    }
+    &-container {
+      @include dflex();
+    }
+    &-image {
+    }
+    &-data {
+    }
+    &-email {
+    }
+    &-phone {
+    }
+  }
+  &-contact {
+  }
+  &-social {
+    &-list {
+      @include dflex;
+      gap: 1rem;
+      list-style: none;
+      &-item {
+        &-svg {
+        }
+      }
+    }
+  }
+}
