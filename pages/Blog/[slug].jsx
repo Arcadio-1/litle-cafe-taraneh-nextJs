@@ -13,8 +13,7 @@ const PostDetailsPage = (props) => {
   }
   return (
     <div>
-      <h1>fuck you</h1>
-      {/* <PostDetails post={props.post} /> */}
+      <PostDetails post={props.post} />
     </div>
   );
 };
