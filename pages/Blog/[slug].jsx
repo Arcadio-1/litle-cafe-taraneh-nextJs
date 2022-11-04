@@ -18,25 +18,28 @@ const PostDetailsPage = (props) => {
   );
 };
 
-export async function getStaticProps(context) {
+export function getStaticProps(context) {
   const { params } = context;
   const { slug } = params;
-  const fileData = getSinglePost(slug);
-  console.log("this is file Data " + fileData);
+
+  const postData = getPostData(slug);
+
   return {
     props: {
-      post: fileData,
+      post: postData,
     },
+    revalidate: 600,
   };
 }
 
-export async function getStaticPaths() {
-  const fileFullNames = getFileNames();
-  const fileNames = fileFullNames.map((item) => item.replace(/\.md$/, ""));
-  const fileParams = fileNames.map((name) => ({ params: { slug: name } }));
+export function getStaticPaths() {
+  const postFilenames = getFileNames();
+
+  const slugs = postFilenames.map((fileName) => fileName.replace(/\.md$/, ""));
+
   return {
-    paths: fileParams,
-    fallback: true,
+    paths: slugs.map((slug) => ({ params: { slug: slug } })),
+    fallback: false,
   };
 }
 
