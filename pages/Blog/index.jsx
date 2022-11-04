@@ -1,6 +1,5 @@
-import Image from "next/image";
 import React from "react";
-import { getFeaturedPosts } from "../../lib/postUtel";
+import { getFeaturedPosts } from "../api/blog/index";
 import BlogPosts from "../../Components/Blog/BlogPosts";
 import Link from "next/link";
 

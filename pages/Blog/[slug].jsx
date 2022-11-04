@@ -1,9 +1,8 @@
 import React from "react";
 import PostDetails from "../../Components/Blog/PostDetails";
-import { getFileNames, getSinglePost } from "../../lib/postUtel";
+import { getFileNames, getSinglePost } from "../api/blog/index";
 
 const PostDetailsPage = (props) => {
-  console.log(props.post);
   if (!props.post) {
     return (
       <div>
@@ -22,7 +21,7 @@ export function getStaticProps(context) {
   const { params } = context;
   const { slug } = params;
 
-  const postData = getPostData(slug);
+  const postData = getSinglePost(slug);
 
   return {
     props: {

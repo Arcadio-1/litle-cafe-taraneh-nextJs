@@ -1,6 +1,6 @@
 import React from "react";
 import BlogPosts from "../../../Components/Blog/BlogPosts";
-import { getAllPost } from "../../../lib/postUtel";
+import { getAllPost } from "../../api/blog/index";
 
 const PostList = ({ posts }) => {
   return (

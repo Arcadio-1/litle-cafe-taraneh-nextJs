@@ -2,5 +2,15 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/Blog/[slug]": "pages/Blog/[slug].js"
+  "/api/blog": "pages/api/blog.js",
+  "/cart": "pages/cart.html",
+  "/": "pages/index.html",
+  "/Blog/[slug]": "pages/Blog/[slug].js",
+  "/Blog/list": "pages/Blog/list.js",
+  "/api/buying": "pages/api/buying.js",
+  "/manager": "pages/manager.js",
+  "/Shop": "pages/Shop.js",
+  "/Shop/[id]": "pages/Shop/[id].js",
+  "/Blog": "pages/Blog.js",
+  "/404": "pages/404.html"
 }
