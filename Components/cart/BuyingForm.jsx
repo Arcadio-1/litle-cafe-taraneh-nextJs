@@ -43,7 +43,7 @@ const BuyingForm = () => {
         orders: cartItems,
       };
 
-      const request = fetch("/api/buying", {
+      const request = fetch("/api/buying/manageOrders", {
         method: "POST",
         body: JSON.stringify(item),
         headers: { "Content-Type": "application/json" },
