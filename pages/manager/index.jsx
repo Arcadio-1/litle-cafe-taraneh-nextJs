@@ -32,6 +32,7 @@ export async function getStaticProps() {
     props: {
       orders: JSON.parse(orderData),
     },
+    revalidate: 60,
   };
 }
 
