@@ -1,21 +1,22 @@
 import React, { useEffect, useState } from "react";
 import OrderItem from "./OrderItem";
-const OrderList = () => {
-  // const { orders } = props;
-  const [orders, setOrders] = useState([]);
+const OrderList = (props) => {
+  const { orders } = props;
+  // console.log(`%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% ${orders}`);
+  // const [orders, setOrders] = useState([]);
 
-  useEffect(() => {
-    const getOrders = async () => {
-      const request = await fetch("./api/buying/manageOrders", {
-        method: "GET",
-        headers: { "Content-Type": "application/json" },
-      });
-      const data = await request.json();
-      console.log(data.status + data.message);
-      setOrders(data.orders);
-    };
-    getOrders();
-  }, []);
+  // useEffect(() => {
+  //   const getOrders = async () => {
+  //     const request = await fetch("./api/buying/manageOrders", {
+  //       method: "GET",
+  //       headers: { "Content-Type": "application/json" },
+  //     });
+  //     const data = await request.json();
+  //     console.log(data.status + data.message);
+  //     setOrders(data.orders);
+  //   };
+  //   getOrders();
+  // }, []);
 
   return (
     <div>

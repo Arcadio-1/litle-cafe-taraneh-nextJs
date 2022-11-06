@@ -9,7 +9,7 @@ const SocialIcons = () => {
           <li className="footer-social-list-item">
             <Image
               className="footer-social-list-item-svg"
-              src="/images/icons/socialMedia/faceBook.svg"
+              src="/images/icons/socialMedia/facebook.svg"
               alt="faceBook"
               width={20}
               height={20}

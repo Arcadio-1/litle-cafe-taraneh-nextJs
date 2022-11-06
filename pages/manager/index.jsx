@@ -1,39 +1,38 @@
 import React from "react";
-// import { getFileData, getFilePath } from "../../apiHelper/Helper";
 import Order from "../../Components/manage/Order";
+import { getAllOrders } from "../../lib/api-helper";
 
-const index = () => {
-  // if (!props.orders) {
-  //   return (
-  //     <div>
-  //       <p>no items is found</p>
-  //     </div>
-  //   );
-  // }
+const index = (props) => {
+  const { orders } = props.orders;
+  const { status } = props.orders;
+
+  if (!orders) {
+    return (
+      <div>
+        <p>no items is found</p>
+      </div>
+    );
+  }
+
   return (
     <div>
-      {/* <Order orders={props.orders} /> */}
-      <Order />
+      {status === "notFound" && <h1>no item is found</h1>}
+      {status === "error" && <h1>somthing is went wrong</h1>}
+      {status === "success" && <Order orders={orders} />}
     </div>
   );
 };
 
-// export async function getStaticProps() {
-//   let orderData;
-//   const request = await fetch("./api/buying/manageOrders", {
-//     method: "GET",
-//     headers: { "Content-Type": "application/json" },
-//   });
-//   const data = await request.json();
-//   orderData = data.orders;
-//   if (!orderData) {
-//     orderData = null;
-//   }
-//   return {
-//     props: {
-//       orders: orderData,
-//     },
-//   };
-// }
+export async function getStaticProps() {
+  let orderData = await getAllOrders();
+  if (!orderData) {
+    orderData = null;
+  }
+  return {
+    props: {
+      orders: JSON.parse(orderData),
+    },
+  };
+}
 
 export default index;
