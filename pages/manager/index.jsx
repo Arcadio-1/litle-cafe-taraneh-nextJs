@@ -1,16 +1,23 @@
 import React from "react";
+import { Fragment } from "react";
 import Order from "../../Components/manage/Order";
 import { getAllOrders } from "../../lib/api-helper";
-
+import Head from "next/head";
 const index = (props) => {
   const { orders } = props.orders;
   const { status } = props.orders;
 
   if (!orders) {
     return (
-      <div>
-        <p>no items is found</p>
-      </div>
+      <Fragment>
+        <Head>
+          <title>All Orders</title>
+          <meta name="description" content="all orders are here" />
+        </Head>
+        <div>
+          <p>no items is found</p>
+        </div>
+      </Fragment>
     );
   }
 

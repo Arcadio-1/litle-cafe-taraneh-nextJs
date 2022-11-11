@@ -116,8 +116,11 @@
   }
   &-log {
     @include dflex;
-    gap: 0.2rem;
     grid-area: log;
+    &-out {
+      @include dflex;
+      gap: 0.2rem;
+    }
     a {
       text-decoration: none;
       color: color(light);

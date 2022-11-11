@@ -1,6 +1,7 @@
-import React from "react";
+import React, { Fragment } from "react";
 import PostDetails from "../../Components/Blog/PostDetails";
 import { getFileNames, getSinglePost } from "../api/blog/index";
+import Head from "next/head";
 
 const PostDetailsPage = (props) => {
   if (!props.post) {
@@ -11,9 +12,15 @@ const PostDetailsPage = (props) => {
     );
   }
   return (
-    <div>
-      <PostDetails post={props.post} />
-    </div>
+    <Fragment>
+      <Head>
+        <title>Cafe Taraneh {props.post.title}</title>
+        <meta name="description" content={props.post.title} />
+      </Head>
+      <div>
+        <PostDetails post={props.post} />
+      </div>
+    </Fragment>
   );
 };
 

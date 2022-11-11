@@ -1,10 +1,15 @@
 import React from "react";
 import { getFilePath, getFileData } from "../../../apiHelper/Helper";
 import ProductDetails from "../../../Components/Shop/productDetails";
+import Head from "next/head";
 const index = (props) => {
   console.log(props.item);
   return (
     <div>
+      <Head>
+        <title>{props.item.title}</title>
+        <meta name="description" content={props.item.title} />
+      </Head>
       <ProductDetails prod={props.item} />
     </div>
   );
