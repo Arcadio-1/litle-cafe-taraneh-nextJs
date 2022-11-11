@@ -7,7 +7,7 @@ export default function Home() {
     <div>
       <Head>
         <title>Cafe Taraneh</title>
-        <meta charset="UTF-8" />
+        <meta charSet="UTF-8" />
         <meta name="description" content="Cafe Taraneh is best Website Ever" />
         <meta name="keywords" content="HTML, CSS, JavaScript" />
         <meta name="author" content="John Doe" />
